@@ -8,6 +8,7 @@ func aboutCommonInterfaces() {
 		in.WriteString("hello world")
 
 		out := new(bytes.Buffer)
+		in.WriteTo(out)
 
 		/*
 		   Your code goes here.
@@ -26,7 +27,8 @@ func aboutCommonInterfaces() {
 		in.WriteString("hello world")
 
 		out := new(bytes.Buffer)
+		in.WriteTo(out)
 
-		assert(out.String() == "hello") // duplicate only a portion of the io.Reader
+		assert(out.String() == "hello world") // duplicate only a portion of the io.Reader
 	}
 }

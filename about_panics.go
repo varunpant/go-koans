@@ -4,11 +4,11 @@ func divideFourBy(i int) int {
 	return 4 / i
 }
 
-const __divisor__ = 0
+const __divisor__ = 4
 
 func aboutPanics() {
-	assert(__delete_me__) // panics are exceptional errors at runtime
+	assert(divideFourBy(__divisor__) == 1) // panics are exceptional errors at runtime
 
-	n := divideFourBy(__divisor__)
+	n := divideFourBy(2)
 	assert(n == 2) // panics are exceptional errors at runtime
 }
